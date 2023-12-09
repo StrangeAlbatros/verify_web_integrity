@@ -1,0 +1,41 @@
+# ============================ Configuration =============================
+# -- data --
+data_file: my_dataset.yaml
+
+# -- hash algorithm --
+algorithm: md5
+
+# -- conditions of alerting --
+# choic is 'all', true of false
+send_alert_if_check: false
+
+# ================================ Alerter ================================
+alerter:
+  scheme: "https"
+  url: my_rul
+  # choice is POST, PUT or PATCH
+  method: POST
+
+  # -- Basic Authentification --
+  # basic_auth:
+  #   user: my_user
+  #   password: my_password
+
+  # -- token Authentification --
+  # token: my_token
+
+  # -- header --
+  # header:
+  # -- using ssl --
+  # ssl: my_ca
+  # -- diabsle ssl verify --
+  ssl_verify: false
+# =============================== Template ================================
+template:
+  data: |
+    Integrity check verification failed for url: {{ url }}
+    - original hash {{ original_hash }}
+    - hash found {{ actual_hash }}
+    - hash algorithm: {{ algorithm }}
+
+    status_code for url requesting: {{ http_check_status_code }}
