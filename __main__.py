@@ -21,7 +21,6 @@ def get_args():
         help='config file'
     )
     parser.add_argument(
-<<<<<<< HEAD
         '-d', '--data-file', dest='data', 
         default='verify_web_integrity/data.yaml',
         help='Path of dataset file'
@@ -29,10 +28,6 @@ def get_args():
     parser.add_argument(
         '-a', '--algorithms', dest='algorithms', choices=ALGORITHMS, nargs='+',
         help='hash algorithms to use'
-=======
-        '-a', '--algorithms', dest='algorithms', choices=ALGORITHMS, nargs='+',
-        help='algorithms to use'
->>>>>>> a5b147b (add __main__.py)
     )
     parser.add_argument(
         '-v', '--verbose', action='store_true', dest='debug',
