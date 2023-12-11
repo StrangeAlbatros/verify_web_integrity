@@ -1,5 +1,9 @@
 # Verify Webpage integrity
 
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python%203.10-1f425f.svg?logo=python)](https://www.python.org/)
+![GitHub License](https://img.shields.io/github/license/StrangeAlbatros/verify_web_integrity)
+![GitHub repo size](https://img.shields.io/github/repo-size/StrangeAlbatros/verify_web_integrity)
+
 This software is made to monitor the integrity of web page.
 
 It's check the hash of webpage and compare it with the hash in dataset file and send the resut as http request.
